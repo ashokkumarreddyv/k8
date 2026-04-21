@@ -1,0 +1,8 @@
+kind: pod
+apiVersion: v1
+metadata:
+ name: secret
+type: opaque
+data:
+  name: ashok
+  password: 123 

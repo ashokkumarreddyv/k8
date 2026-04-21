@@ -1,26 +1,28 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
- name: nginx
+  name: nginx
 spec:
- type: NodePort
- selector:
-  project: ashok
-  component: backend
- ports:
-  - protocal: tcp
-    port: 80
-    targetport: 80
+  type: NodePort
+  selector:
+    project: ashok
+    component: backend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
 
 ---
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
- name: backend
- labels:
-  project: ashok
-  component: backend
+  name: backend
+  labels:
+    project: ashok
+    component: backend
 spec:
- containers:
- - name: nginx
-   image: nginx      
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80

@@ -4,7 +4,7 @@ metadata:
  name: nginx
 spec:
  type: NodePort-np
- selectors:
+ selector:
   project: ashok
   component: backend
 ports:
@@ -17,7 +17,7 @@ kind: Pod
 apiVersion: v1
 metadata:
  name: backend-np
- lables:
+ labels:
   project: ashok
   component: backend
 spec:

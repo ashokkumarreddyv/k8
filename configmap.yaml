@@ -1,0 +1,7 @@
+apiVersion : v1
+kind: config
+metadata:
+ name: configmap
+data:
+ course: aws
+ owner: yodhan
